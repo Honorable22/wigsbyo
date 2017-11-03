@@ -1,0 +1,806 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'caviar_dreamsregular';
+    src: url('CaviarDreams-webfont.eot');
+    src: url('CaviarDreams-webfont.eot?#iefix') format('embedded-opentype'),
+         url('CaviarDreams-webfont.woff2') format('woff2'),
+         url('CaviarDreams-webfont.woff') format('woff'),
+         url('CaviarDreams-webfont.ttf') format('truetype'),
+         url('CaviarDreams-webfont.svg#caviar_dreamsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'caviar_dreamsbold';
+    src: url('Caviar_Dreams_Bold-webfont.eot');
+    src: url('Caviar_Dreams_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Caviar_Dreams_Bold-webfont.woff2') format('woff2'),
+         url('Caviar_Dreams_Bold-webfont.woff') format('woff'),
+         url('Caviar_Dreams_Bold-webfont.ttf') format('truetype'),
+         url('Caviar_Dreams_Bold-webfont.svg#caviar_dreamsbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'monotonregular';
+    src: url('monoton-regular-webfont.woff2') format('woff2'),
+         url('monoton-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+.dropdown-menu{
+    position: absolute;
+    width: 100%; 
+    text-align: center;
+    background-color: #000; 
+}
+
+
+
+.package .dropdown-menu{
+    width: 85%;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    -ms-transform: translate(-50%, 100%); 
+    background-color: #fff; 
+    opacity: .9;          
+    border-radius: 0px 0px 25px 25px; 
+    z-index: -5; 
+}
+
+
+.package .dropdown-menu a{
+    color: #000;  
+    top: 0px; 
+    margin-right: 0em;
+    padding: 0 1em;
+    opacity: 1;  
+}
+.headlbl{
+    font-family: 'caviar_dreamsregular', Arial, sans-serif;
+    color: #fff; 
+}
+
+.bold{
+    font-family: 'caviar_dreamsbold';
+}
+
+.headlbl2{
+    font-family: 'helvetica neue', Arial, sans-serif; 
+    color: #fff; 
+    font-weight: 300; 
+}
+
+.seclbl{
+    font-family: 'monotonregular';
+    color: #00E2FF; 
+}
+
+.bodytext{
+    width: 100%; 
+    line-height: 1.50em; 
+    color: #fff; 
+    font-weight: 200; 
+}
+
+.bodytext2{
+    width: 100%; 
+    line-height: 1.50em; 
+    color: #000; 
+    font-weight: 200; 
+}
+
+.cart-button{
+    color: #000; 
+    font-weight: 200; 
+    font-family: 'caviar_dreamsbold', Arial, sans-serif;
+    border: 1px solid #979797;
+    border-radius: 25px; 
+    width: 60%; 
+    padding: .4em; 
+    margin: 0 auto; 
+}
+
+.details{
+    background-color: #000; 
+    color: #fff; 
+    border: 1px solid #000;
+}
+
+.text-black{
+    color: #000; 
+}
+
+.text-white{
+    color: #fff; 
+}
+
+.text-blue{
+    color: #00E2FF;
+}
+
+.text-gold{
+    color: #CA995F;
+}
+
+.logo{
+	width: 3.5%; 
+	min-width: 2.5em; 
+}
+
+
+.hamburger {
+    color: #fff;
+    margin-top: .25em; 
+    margin-right: 1.5em; 
+    float: right; 
+    font-size: 1.75em; 
+}
+
+.mobilelogo{
+    margin-top: .5em; 
+    margin-left: 2.5em; 
+    float: left; 
+}
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(255,255,255); /* Black fallback color */
+    background-color: rgba(0,0,0, 1); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 12%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: .5em;
+    text-decoration: none;
+    font-size: 36px;
+    font-family: 'caviar_dreamsregular', Arial, sans-serif; 
+    color: #fff;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+    background-color: #000; 
+    margin: .5em 1em;  
+    border-radius: 25px 25px 25px 25px;
+    border-style: solid;
+    border-color: #fff;
+}
+
+.wigs a{
+background-color: #fff; 
+color: #000;
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 40px;
+    background-color: transparent; 
+    color: #fff; 
+    padding: 0em;
+    border: none; 
+}
+
+.overlay a {
+  font-size: 20px; 
+}
+
+.overlay .closebtn {
+        font-size: 40px;
+        top: 0px;
+        right: 0px;
+    }
+.package{
+  display: none;
+}
+
+
+
+.hamburgerlogo{
+    position: fixed;
+    width: 100%; 
+    height: 50px; 
+    background-color: #000; 
+    padding-bottom: 2em;  
+    border-radius: 0px 0px 100px 100px;  
+    z-index: 98; 
+}
+
+#logolink, .image1 {
+    display: none; 
+}
+
+
+
+.image2{
+    display: block;
+    width: 100%;
+}
+
+.logo2{
+    display: none;
+    position: absolute;
+    z-index: 2; 
+    width: 20%; 
+    min-width: 7em;
+    top: 7em;
+    left: 5em;  
+}
+
+
+.rowctnr{
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    background-color: gray; 
+    height: 100%; 
+    overflow: hidden; 
+}
+
+
+.textbox{
+    width: 100%; 
+    float: none; 
+    background-color: #000;
+    min-height: 550px;  
+    padding: 2em;
+}
+
+.imagebox{
+    width: 100%;
+    float: none; 
+    background-color: #000;
+    min-height: 400px;
+}
+
+.item img{
+    width: 100%; 
+    min-height: 400px; 
+}
+
+.row-margin{
+    margin-top: 4em;  
+    font-family: 'caviar_dreamsregular', Arial, sans-serif;
+}
+
+.row{
+   margin-right: 0px; 
+   margin-left: 0px; 
+}
+
+a:hover,a:focus {
+  text-decoration: none;
+}
+
+.thumbnail :hover {
+     color: #CA995F; 
+     transition: 0.4s; /* Transition effects on hover (color) */
+}
+
+
+.bkg{
+    width: 100%; 
+    height: 100%; 
+    background-color: gray; 
+    overflow: hidden; 
+    position: relative;
+    z-index: 20;
+}
+
+.bkg1{
+    width: 100%; 
+    height: 100%; 
+    background: -webkit-linear-gradient(top, #000, #ABB2B9);
+    background: linear-gradient(to bottom, #000, #ABB2B9);
+    float: none;
+    color: #fff; 
+    font-family: 'caviar_dreamsregular', Arial, sans-serif;
+}
+
+.bkg2{
+    width: 100%; 
+    height: 100%; 
+    background-color: #c2c2c2; 
+    float:none;
+    padding: 2em; 
+}
+
+.bgimg-1 {
+    background: linear-gradient( rgba(0,0,0,.4), rgba(0,0,0,.4) ),
+    url(../images/image5.jpg);
+    min-height: 550px;
+    background-size: 100% 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-padding{
+    padding: 2em; 
+}
+
+.form-control{
+    border-radius: 50px; 
+}
+
+.form-group textarea {
+    border-radius: 40px; 
+    padding: 1em; 
+}
+
+.btn{
+    border-radius: 50px; 
+}
+
+hr{
+    margin-top: 0px; 
+}
+
+.mrg{
+    margin-top: 0px; 
+}
+
+.bgfooter{
+    background-color: #000; 
+    padding: 2em; 
+    width: 100%; 
+}
+
+footer p{
+    float: none;  
+    padding: 0% 0%;
+}
+
+.footmargin{
+    border-right: 0px solid #fff; 
+}
+
+#about{
+    padding: 3em; 
+}
+
+.head-image{
+    width: 100%;
+    min-height: 680px;
+    background: -webkit-linear-gradient(top, #00E2FF, #146C78);
+    background: linear-gradient(to bottom, #00E2FF, #146C78);
+}
+
+.main-block{
+    width: 100%; 
+    display: inline-block;
+    height: 100%; 
+    background-color: #fff;
+}
+
+.block1{
+    width: 100%; 
+    min-height: 200px;
+    background-color: #fff;
+    float: none;
+    height: 100%; 
+    padding: 4em 3em;  
+}
+
+.block2{
+    width: 100%; 
+    min-height: 400px;
+    background-color: #fff;
+    float: none;
+}
+
+.image3, .image4{
+    position: relative;
+    display: block;
+    width: 45%; 
+    min-width: 18em; 
+    margin: 0 auto; 
+    padding: 4em; 
+    padding-top: 0em;
+}
+
+.image4{
+    width: 40%;
+    min-width: 15em;
+}
+
+.slideanim {visibility:hidden;}
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    /* The duration of the animation */
+    animation-duration: 1.5s; 
+    -webkit-animation-duration: 1.5s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    } 
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+
+.slideanimer {visibility:hidden;}
+.slider {
+    /* The name of the animation */
+    animation-name: slider;
+    -webkit-animation-name: slider; 
+    /* The duration of the animation */
+    animation-duration: 1.5s; 
+    -webkit-animation-duration: 1.5s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slider {
+    0% {
+        opacity: 0;
+        transform: translateX(-70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    } 
+}
+@-webkit-keyframes slider {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+    }
+}
+
+.slideanimlft {visibility:hidden;}
+.slidelft {
+    /* The name of the animation */
+    animation-name: slider;
+    -webkit-animation-name: slidelft; 
+    /* The duration of the animation */
+    animation-duration: 1.5s; 
+    -webkit-animation-duration: 1.5s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slidelft {
+    0% {
+        opacity: 0;
+        transform: translateX(70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    } 
+}
+@-webkit-keyframes slidelft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+    }
+}
+
+.body-container{
+    position: relative;
+    top: 125px; 
+    margin-bottom: 10em; 
+}
+
+.care-container{
+    display: inline-block;
+    width: 100%; 
+    background-color: #c2c2c2;
+}
+
+.care-label{
+    position: relative;
+    width: 100%; 
+    background-color: #000;  
+    border-radius: 0px 0px 100px 100px;   
+}
+
+.care-label h3 {
+    padding: .5em; 
+}
+
+.care-margin h4 {
+    padding: 1em 2em;   
+}
+
+.care-background{
+    background-color: #fff; 
+}
+
+.cart{
+    display: block;
+    width: 100%; 
+    height: 800px;
+    background-color: #c2c2c2;  
+}
+
+.cart h1{
+   margin-top: 0px; 
+   position: relative;
+   top: 100px;
+}
+
+
+
+/* This style is for tablets with an min width of 768px */
+@media only screen and (min-width: 768px) {
+
+.image1{
+    display: block;
+    width: 100%; 
+    position: relative;
+    z-index: 1; 
+}
+
+.image2{
+    display: none; 
+}
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+#logolink{
+    display: inline; 
+}
+
+.overlay, .hamburger, .hamburgerlogo{
+  display: none;
+}
+
+.bodytext{
+    width: 85%; 
+}
+
+.logo2{
+    width: 17%; 
+    min-width: 10em;
+    top: 12em;
+    left: 10em;  
+}
+
+.package{
+    position: fixed;
+    display: block;
+    width: 100%;
+	background-color: #000; 
+	padding-bottom: 2em;  
+	border-radius: 0px 0px 100px 100px;  
+    z-index: 99;
+}
+
+
+.package a{ 
+    position: relative;
+	color: #fff; 
+	text-decoration: none; 
+	top: 15px; 
+	font-size: 16px; 
+	margin-right: 3em; 
+	font-family: 'caviar_dreamsregular', Arial, sans-serif;
+}
+
+
+
+.package a:hover {
+  color: #CA995F; 
+   transition: 0.4s; /* Transition effects on hover (color) */
+}
+
+.textbox{
+    width: 50%; 
+    float: left; 
+    background-color: #000;
+    min-height: 550px;  
+    padding: 2em;
+}
+
+.imagebox{
+    width: 50%;
+    float: left; 
+    background-color: #000;
+    min-height: 550px;
+}
+
+.item img{
+    width: 100%; 
+    min-height: 550px; 
+}
+
+
+.bkg1, .bkg2{
+    float: left; 
+}
+
+.bkg1{
+    width: 45%; 
+}
+
+.bkg2{
+    width: 55%; 
+}
+
+.block1{
+    float: left; 
+    width: 52.50%; 
+    padding: 4em; 
+}
+
+.block2{
+    float: left;
+    width: 47.50%; 
+}
+
+.float-right{
+    float: right; 
+}
+
+.image3, .image4{
+    padding: 4em; 
+}
+
+.bgfooter{
+    background-color: #000; 
+    padding: 2em; 
+    width: 100%; 
+}
+
+.bgbox{
+    display: inline-block;
+    width: 700px; 
+    margin: 0 auto;
+}
+
+footer p{
+    float: left;  
+    padding: 0% 2%;
+}
+
+#map{
+    padding-right: 0%; 
+}
+
+.footmargin{
+    border-right: .5px solid #fff; 
+}
+
+
+}
+
+
+@media only screen and (min-width: 1400px) {
+
+.rowctnr{
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    background-color: #000; 
+    height: 100%; 
+    overflow: hidden; 
+}
+
+
+.textbox{
+    width: 50%; 
+    float: left; 
+    background-color: #000;
+    min-height: 550px;  
+    padding: 2em;
+}
+
+.imagebox{
+    width: 50%;
+    float: left; 
+    background-color: #000;
+    min-height: 550px;
+}
+
+.item img{
+    width: 100%; 
+    min-height: 550px; 
+}
+
+
+.bkg{
+    width: 100%; 
+    min-height: 850px; 
+    background-color: gray; 
+}
+
+.bkg1{
+    width: 45%; 
+    min-height: 850px; 
+}
+
+.bkg2{
+    width: 55%; 
+    min-height: 850px; 
+}
+
+.bgimg-1 {
+    min-height: 850px;}
+
+h1, h2, h3, h4, h5{
+    font-size: 150%; 
+}
+    }
+
+
+@media only screen and (min-width: 1700px) {
+
+h1, h2, h3, h4, h5{
+    font-size: 200%; 
+}
+
+}
+
+
+
+
+
+

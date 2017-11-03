@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head profile="http://www.gmstem.org/profile">
+<link rel="icon" type="image/png" href="images/favlogo.png">
+<title>A Wig By: O</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/index.css" type="text/css" charset="utf-8" />
+
+</head>
+
+<body>
+
+ 
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <div class="overlay-content desktopnav">
+  <a href="index.html" id="home">Home</a>
+  <a href="about.html">About</a>
+  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
+          <ul class="dropdown-menu wigs ">
+            <a href="wigs.html">Wigs</a>
+            <a href="bundles.html">Bundles</a>
+            <a href="products.html">Hair Products</a>
+            <a href="index.html#contact">Custom Inquiry</a>
+          </ul>
+  <a id="logolink" href="index.html"><img class="logo" src="images/logo.svg"></a>
+  <a href="haircare.html">Haircare</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="cart.html">Cart</a>
+        
+  </div>
+</div>
+
+<div class="package">
+
+</div>
+
+<div class="hamburgerlogo">
+<a href="index.html"><img class="logo mobilelogo" src="images/logo.svg"></a>
+<!-- Use any element to open/show the overlay navigation menu -->
+<span class="hamburger" onclick="openNav()">☰</span>
+</div>
+
+</div>
+<div class="cart">
+<h1>CART GOES HERE</h1>
+<h1>CART GOES HERE</h1>
+<h1>CART GOES HERE</h1>
+<h1>CART GOES HERE</h1>
+</div>
+
+<footer class="container-fluid bgfooter text-center headlbl2">
+  <div class="bgbox">
+  <p class="footmargin">© 2017 A Wig By: O. All rights reserved.</p> 
+  <p class="footmargin">Privacy Policy</p>
+  <p class="footmargin">Terms of use</p>
+  <p class="footmargin">Sales and Refunds</p>
+  <p id="map">Site Map</p>
+  </div>
+</footer>
+
+</body>
+
+ <script>
+
+    /* Open when someone clicks on the span element */
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+
+$(function(){
+  var $desktopnav = $('.desktopnav').clone();
+  $('.package').html($desktopnav);
+});
+
+$(window).scroll(function() {
+  $(".slideanim").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 600) {
+      $(this).addClass("slide");
+    }
+  });
+});
+
+$(document).ready(function(){
+
+    $(".dropdown-toggle").click(function(){
+        $(".dropdown-menu ").slideToggle();
+    });
+});
+
+    </script>
+
+</html>
